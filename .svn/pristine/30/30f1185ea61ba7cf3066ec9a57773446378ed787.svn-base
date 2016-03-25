@@ -1,0 +1,72 @@
+<!-- code by 许振强 -->    	
+<!doctype html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<meta name="description" content="网页描述" />
+<meta name="Keywords" content="关键字" />
+<link rel="stylesheet" href="./css/common.css">
+<link rel="stylesheet" href="./css/index.css">
+<link rel="javascript" href="./js/ ">
+<style>
+	*{margin: 0; padding: 0; }
+	li{list-style: none; }
+	div{overflow: hidden; position: relative; border: 3px solid #f00; width: 920px; height: 305px; margin: 50px auto;  }
+	li{ width: 860px; position: absolute;top: 0; left: 0;  }
+	span{position: absolute; top: 0; left: 0; width: 20px; height: 100%; text-align: center;  }
+	img{margin-left: 20px; }
+</style>
+<script src="js/move.js"></script>
+<script>
+window.onload=function (){
+	var aLi=document.getElementsByTagName('li');
+	var aSpan=document.getElementsByTagName('span');
+	var nLiW=aLi[0].offsetWidth;
+	var nSpanW=aSpan[0].offsetWidth;
+	for(var i=0;i<aLi.length; i++){
+		if(i>0){
+			aLi[i].style.left=nLiW+(i-1)*nSpanW+'px';
+		}
+	}
+	for(var i=0;i<aLi.length; i++){
+		(function (index){
+			aLi[i].onclick=function (){
+				for(var i=0;i<aLi.length;i++){
+					if(i<=index){
+						//aLi[i].style.left=i*nSpanW+'px';
+						var left=i*nSpanW;
+					}else{
+						//aLi[i].style.left=nLiW+(i-1)*nSpanW+'px';
+						var left=nLiW+(i-1)*nSpanW;
+					}
+					move(aLi[i],{left:left});
+				}
+			};
+		})(i);
+	}
+};
+</script>
+</head>
+<body>
+	<div id="box">
+		<ul>
+			<li>
+				<span style="background: green">第一项</span>
+				<img src="images/03/0.jpg" alt="">
+			</li>
+			<li>
+				<span style="background: yellow">第二项</span>
+				<img src="images/03/1.jpg" alt="">
+			</li>
+			<li>
+				<span style="background: blue">第三项</span>
+				<img src="images/03/2.jpg" alt="">
+			</li>
+			<li>
+				<span style="background: pink">第四项</span>
+				<img src="images/03/3.jpg" alt="">
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

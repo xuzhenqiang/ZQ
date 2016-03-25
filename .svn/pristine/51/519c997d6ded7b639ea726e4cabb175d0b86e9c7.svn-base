@@ -1,0 +1,237 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+    font-family: 'Nunito-Bold';
+    src: url(../fonts/Nunito-Bold.ttf);
+}
+body,html{
+    width: 100%;
+    height: 100%;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family:"Arial";
+    color: #393b3a;
+}
+span{color: #0099FF;}
+.box{
+    width: 100%;
+    height: 100%;
+    min-width: 1240px;
+    min-height: 600px;
+    background: #ccc;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.mBox{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.hdBox,.bdBox,.footer,.intro{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+/*head*/
+.hdBox{
+    text-align: center;
+    color: #393b3a;
+    position: relative;
+}
+h1{
+
+    font-family:"Nunito-Bold";
+    font-size: 60px;
+}
+.hdBox .text{
+    font-family:"Nunito-Bold";
+    font-size: 20px;
+    position: relative;
+
+}
+.hdBox .icon{
+    display: block;
+    margin: 50px auto 50px;
+}
+.toBd{
+    position: absolute;
+    bottom:0;
+    left: 50%;
+    width: 160px;
+    height: 70px;
+    margin-left: -80px;
+    background: #00cfbd;
+    border-radius: 10px 10px 0 0 ;
+}
+.toBd .triangle{
+    display: inline-block;
+    width: 0;
+    height:0;
+    border:20px dashed transparent;
+    border-top:20px dashed #fff;
+    margin:30px auto;
+}
+/*head-end*/
+/*body*/
+.bdBox{
+    background: #cacdee;
+    text-align: center;
+    min-width: 800px;
+    min-height: 600px;
+    position: relative;
+}
+.nav{
+    position: absolute;
+    right:10px;
+    bottom:10px;
+    z-index: 10;
+}
+.nav .toUp{
+    display: block;
+    width: 58px;
+    height: 58px;
+    background: url("../images/img-sprite.png") 0 -278px no-repeat;
+}
+.nav .toDw{
+    display: block;
+    width: 58px;
+    height: 58px;
+    background: url("../images/img-sprite.png") 0 -335px no-repeat;
+}
+.nav .toTop{
+    display: block;
+    width: 58px;
+    height: 58px;
+    background: url("../images/img-sprite.png") 0 -400px no-repeat;
+}
+.tit{
+    height: 140px;
+    text-align: center;
+    line-height: 140px;
+    font-size: 70px;
+    font-family: Nunito-Bold;
+}
+.bdBox .listBox{
+    width: 1000px;
+    height: 400px;
+    background: #fff;
+    position: absolute;/*top: 100px;left: 0;bottom: 0;right:0;*/
+    top: 140px;
+    left: 50%;
+    margin-left:-500px;
+    overflow: hidden;
+}
+.listBox .btn{
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;;
+    width: 60px;
+    height: 60px;
+    background: rgba(255,255,255,0.5);
+    z-index: 5;
+}
+.listBox .list{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 4000px;
+}
+.listBox .list a{
+    position: relative;
+    display: block;
+    font-size: 60px;
+    width: 800px;
+    height: 300px;
+    margin: 50px 100px;
+}
+.listBox .btn.l{
+    left: 6px;
+    background: url("../images/img-sprite.png") 0 -144px no-repeat;
+}
+.listBox .btn.r{
+    right: 6px;
+    background: url("../images/img-sprite.png") 0 -210px no-repeat;
+}
+.listBox .content{
+    width: 800px;
+    height: 300px;
+    background: #ccc;
+}
+.listBox .content .txt{
+    font-size: 18px;
+    background: #eee;
+    height: 220px;
+    width: 220px;
+    padding: 40px;
+    color: #000;
+}
+.listBox .content .txt h3{
+    font-size: 24px;
+}
+.listBox .content .txt p{
+    text-align: left;
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: 微软雅黑 ;
+}
+.listBox .content img{
+    margin:50px 20px 0;
+}
+    /*body-end*/
+.intro{
+    background: #c2d2ff;
+    position: relative;
+    text-align: center;
+}
+.intro .iList ul{
+    display: inline-block;
+    background: #eee;
+    margin-top: 50px;
+}
+.intro .iList a{
+    display: block;
+    width: 320px;
+    height: 200px;
+    background: #ccc;
+    margin: 20px;
+}
+
+/*footer*/
+.footer{
+    position: relative;
+    background: #fbe128;
+    text-align: center;
+}
+.footer .fList{
+    margin-top: 50px;
+    display:inline-block;
+}
+.footer .fList li{
+    margin: 10px;
+}
+.footer .fList a{
+    display: block;
+    width: 280px;
+    height: 200px;
+    position: relative;
+}
+.foot{
+    width: 200px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    bottom: 20px;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+

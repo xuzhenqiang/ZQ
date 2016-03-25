@@ -1,0 +1,128 @@
+<!--code by 许振强-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/index.css" />
+    <style></style>
+    <script src="js/jquery-1.7.2.js"></script>
+    <script src="js/move.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        $(window).ready(function(){
+            if(browser().version==6||browser().version==7||browser().version==8){
+                alert('您当前浏览器版本为IE'+browser().version+',本网站暂不支持IE低版本请使用IE10以上或chrome、fireFox访问 谢谢');
+                var oBd=document.getElementsByTagName('body')[0];
+                oBd.style.textAlign='center';
+                oBd.style.fontSize='50px';
+                oBd.innerHTML='您当前的浏览器版本为IE'+browser().version+'本网站暂不支持IE低版本，请使用IE10+或chrome、fireFox谢谢';
+                return;
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="box">
+        <div class="mBox">
+            <div class="hdBox">
+                <img class="icon" src="images/p1.png" alt=""/>
+                <h1>Hello..<span>!</span></h1>
+                <p class="text">1</p>
+                <p class="text">1</p>
+                <p class="text">1</p>
+                <p class="text">1</p>
+                <p class="text">Email:xuzhenqiang@live.cn</p>
+                <!--乡下移动-->
+                <a class="toBd" href="javascript:;"><span class="triangle"></span></a>
+            </div>
+            <div class="bdBox">
+                <!--导航-->
+                <div class="nav">
+                    <a class="toUp" href="javascript:;"></a>
+                    <a class="toDw" href="javascript:;"></a>
+                </div>
+                <h2 class="tit">效果展示</h2>
+                <div class="listBox clearFix tab">
+                    <p class="btn l" href="javascript:;"></p>
+                    <p class="btn r" href="javascript:;"></p>
+                    <ul class="list">
+                        <li class="fl">
+                            <a href="1.html" target="view_window">
+                                <div class="content clearFix">
+                                    <div class="txt fl">
+                                        <h3>3D切换</h3>
+                                        <p>此效果主要运用了CSS3中的倒影，景深，translate和rotate此外还用到了一些数组的操作方法此效果只支持高级浏览器，其中倒影效果支持Chrome</p>
+                                    </div>
+                                    <img class="fl" src="images/03/0.jpg" alt="" width="460"/>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="fl">
+                            <a href="2.html" target="view_window">
+                                <div class="content clearFix">
+                                    <div class="txt fl">
+                                        <h3>3D爆炸</h3>
+                                        <p>此效果主要运用了CSS3中的transform，translate3d和rotate当运动结束的时候改变transform，translate3d和rotate为0此效果只支持高级浏览器</p>
+                                    </div>
+                                    <img class="fl" src="images/02/a.png" alt="" width="460"/>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="fl">
+                            <a href="3.html" target="view_window">
+                                <div class="content clearFix">
+                                    <div class="txt fl">
+                                        <h3>3D照片环</h3>
+                                        <p>此效果主要运用了CSS3中的倒影，景深，translate和rotate此外还用到了一些数组的操作方法此效果只支持高级浏览器，其中倒影效果支持Chrome</p>
+                                    </div>
+                                    <img class="fl" src="images/3d/a.png" alt="" width="460"/>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="nav">
+                    <a class="toTop" href="javascript:;"></a>
+                    <a class="toUp" href="javascript:;"></a>
+                </div>
+                <h2 class="tit">作品展示</h2>
+                <ul class="fList clearFix">
+                    <li class="fl">
+                        <a href="code/360/index.html" target="view_window">
+                            <img src="images/360.jpg" alt=""/>
+                        </a>
+                    </li>
+                    <li class="fl">
+                        <a href="code/fl/index.html" target="view_window">
+                            <img src="images/fl.jpg" alt=""/>
+
+                        </a>
+                    </li>
+                    <li class="fl">
+                        <a href="code/m-jd/index.html" target="view_window">
+                            <img src="images/jd.jpg" alt=""/>
+                        </a>
+                    </li>
+                    <li class="fl">
+                        <a href="code/m-xc/index.html" target="view_window">
+                            <img src="images/xc.jpg" alt=""/>
+                        </a>
+                    </li>
+                </ul>
+                <div class="foot">
+                    <a class="QQ" href="javascript:;">QQ</a>|
+                    <a href="javascript:;">微博</a>|
+                    <a href="javascript:;">知乎</a>|
+                    <a href="javascript:;">人人</a>|
+                    <a href="javascript:;">Github</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

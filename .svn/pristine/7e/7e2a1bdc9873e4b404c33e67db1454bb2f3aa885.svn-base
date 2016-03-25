@@ -1,0 +1,61 @@
+<!-- code by 许振强 -->    	
+<!doctype html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<meta name="description" content="网页描述" />
+<meta name="Keywords" content="关键字" />
+<link rel="stylesheet" href="./css/common.css">
+<link rel="stylesheet" href="./css/index.css">
+<link rel="javascript" href="./js/ ">
+<style>
+	*{margin: 0; padding: 0; }
+	#div1{position: absolute;top: 100px; left: 0;  background: #ccc; width: 200px; height: 200px; z-index: 1; }
+	#div2{position: absolute;top: 100px; left:300px;  background: #ccc; width: 200px; height: 200px; }
+</style>
+<script>
+window.onload=function (){
+	var oDiv=document.getElementById('div1');
+	var oDiv2=document.getElementById('div2');
+	oDiv.onmousedown=function (ev){
+		var oEvent=ev || event;
+		var left=oEvent.clientX-oDiv.offsetLeft;
+		var top=oEvent.clientY-oDiv.offsetTop;
+		document.onmousemove=function (ev){
+			var oEvent= ev || event;
+			var nLeft=oEvent.clientX-left;
+			var nTop=oEvent.clientY-top;
+			if(nTop<50){
+				nTop=0;
+			}
+			oDiv.style.left=nLeft+'px';
+			oDiv.style.top=nTop+'px';
+			var l1=oDiv.offsetLeft;
+			var r1=oDiv.offsetWidth+l1;
+			var t1=oDiv.offsetTop;
+			var b1=oDiv.offsetHeight+t1;
+
+			var l2=oDiv2.offsetLeft;
+			var r2=oDiv2.offsetWidth+l2;
+			var t2=oDiv2.offsetTop;
+			var b2=oDiv2.offsetHeight+t2	;
+			if(l1>r2 || r1<l2 || t1>b2 || b1<t2){
+				oDiv2.style.background='green';
+			}else{
+				oDiv2.style.background='#ff0';
+			}
+		};
+		document.onmouseup=function (){
+			document.onmousemove=null;
+			document.onmouseup=null;
+		};
+	};
+	
+};
+</script>
+</head>
+<body>
+	<div id="div1"></div>
+	<div id="div2"></div>
+</body>
+</html>
